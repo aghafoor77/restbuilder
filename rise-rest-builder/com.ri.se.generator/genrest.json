@@ -1,0 +1,21 @@
+{
+   "mavenGroupId":"com.ri.se.user",
+   "mavenArtifact":"veidblock",
+   "className":"DAPApply",
+   "out":"/home/blockchain/Desktop/temp/",
+   "port":0,
+   "column":{
+      "metaData":"String",
+      "roles":"String",
+      "sha256":"String",
+      "reqRecDate":"Date",
+      "reqProcessedBy":"Date",
+      "reqProcessedDate":"Date",
+      "ecdsa":"String",
+      "publicKeyEC":"String ",
+      "publicKeyECprocessBy":"String ",
+      "status":"int",
+      "others":"String"
+   },
+   "idColumn":"sha256"
+}
