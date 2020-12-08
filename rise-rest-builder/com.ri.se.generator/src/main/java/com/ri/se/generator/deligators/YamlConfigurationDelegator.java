@@ -19,9 +19,9 @@ public class YamlConfigurationDelegator implements Generate {
 				"# Database settings.\n" + 
 				"database:\n" + 
 				"  driverClass: com.mysql.jdbc.Driver\n" + 
-				"  url: jdbc:mysql://localhost:3306/dsa?createDatabaseIfNotExist=true\n" + 
-				"  user: root\n" + 
-				"  password: 12345678\n" + 
+				"  url: jdbc:mysql://localhost:3306/"+schema.getMavenArtifact().toLowerCase()+"?createDatabaseIfNotExist=true\n" + 
+				"  user: <CHNAGE_ME>\n" + 
+				"  password: <CHNAGE_ME>\n" + 
 				"  maxWaitForConnection: 1s\n" + 
 				"  validationQuery: \"SELECT 1\"\n" + 
 				"  validationQueryTimeout: 3s\n" + 

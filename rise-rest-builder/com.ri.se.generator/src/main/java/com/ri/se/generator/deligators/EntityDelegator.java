@@ -42,17 +42,16 @@ public class EntityDelegator implements Generate {
 		stringBuffer.append("\t@Id" + ln);
 		stringBuffer.append("\t@Column(name = \"" + schema.getIdColumn() + "\")" + ln);
 		// stringBuffer.append("\t" + attHeaderPrivate + " " + id + ";" + ln);
-
 		String constrcutor = "";
 		constrcutor = " ";
 		for (int i = 0; i < column.size(); i++) {
 			String variable = column.get(i).getVariable();
 			String dataType = column.get(i).getDatatype();
 			constrcutor += dataType + " " + variable + ",";
+			variable = variable.trim();
 			stringBuffer.append("\t" + attHeaderPrivate + " " + dataType + " " + variable + ";" + ln);
 
 		}
-
 		if (constrcutor.lastIndexOf(",") > 0) {
 			constrcutor = constrcutor.substring(0, constrcutor.lastIndexOf(","));
 

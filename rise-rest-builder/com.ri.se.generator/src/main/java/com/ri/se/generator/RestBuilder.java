@@ -72,6 +72,9 @@ public class RestBuilder {
 		 */
 
 		SourceCodeStructureHandler codeStructureHandler = new SourceCodeStructureHandler(schema);
+		codeStructureHandler.getSrcResources();
+		codeStructureHandler.getTestJava();
+		codeStructureHandler.getTestResources();
 		/*
 		 * System.out.println(codeStructureHandler.getProjectSource()); boolean b =
 		 * false; if (b) { return; }
