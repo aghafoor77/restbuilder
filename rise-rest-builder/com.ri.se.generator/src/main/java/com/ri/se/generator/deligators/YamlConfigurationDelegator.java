@@ -55,7 +55,7 @@ public class YamlConfigurationDelegator implements Generate {
 				"        whitespace_stripping: yes\n" + 
 				"\n" + 
 				"swagger:\n" + 
-				"  resourcePackage: "+schema.getMavenGroupId()+"");
+				"  resourcePackage: "+schema.getMavenGroupId()+".utils"+"");
 		return buffer.toString();
 	}
 }
