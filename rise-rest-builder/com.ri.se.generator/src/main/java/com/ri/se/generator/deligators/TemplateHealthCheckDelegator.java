@@ -11,7 +11,7 @@ public class TemplateHealthCheckDelegator implements Generate {
 
 	private String produceTemplateHealthCheck(Schema schema) {
 		StringBuffer buffer = new StringBuffer();
-		buffer.append("package " + schema.getMavenGroupId() + ";" + ln + ln);
+		buffer.append("package " + schema.getMavenGroupId()+".utils" + ";" + ln + ln);
 		buffer.append("import com.codahale.metrics.health.HealthCheck;\n" + 
 				"\n" + 
 				"public class TemplateHealthCheck extends HealthCheck {\n" + 

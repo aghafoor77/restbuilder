@@ -15,10 +15,10 @@ public class ResourceDelegator implements Generate {
 	private String produceResource(Schema schema) {
 		StringBuffer buffer = new StringBuffer();
 		if (!Objects.isNull(schema.getMavenGroupId())) {
-			buffer.append("package " + schema.getMavenGroupId() + ";" + ln);
+			buffer.append("package " + schema.getMavenGroupId()+".utils" + ";" + ln);
 			buffer.append(ln);
 		}
-
+		buffer.append("import "+schema.getMavenGroupId()+".persistance.*;" + ln); 
 		buffer.append("import java.util.Date;" + ln);
 		buffer.append("import java.util.List;" + ln);
 		buffer.append("import javax.validation.Valid;" + ln);

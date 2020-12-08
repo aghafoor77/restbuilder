@@ -14,7 +14,7 @@ public class ModelListDelegator implements Generate {
 
 		StringBuffer buffer = new StringBuffer();
 
-		buffer.append("package " + schema.getMavenGroupId() + ";" + ln + ln);
+		buffer.append("package " + schema.getMavenGroupId()+".persistance" + ";" + ln + ln);
 
 		buffer.append("import java.util.ArrayList;\n" + "\n" + "public class " + schema.getClassName()
 				+ "List extends ArrayList<" + schema.getClassName() + ">{\n" + "\n" + "}\n" + "");

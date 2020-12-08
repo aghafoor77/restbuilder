@@ -38,7 +38,7 @@ public class DAODelegator implements Generate {
 		buffer.append("");
 
 		if (!Objects.isNull(schema.getMavenGroupId())) {
-			buffer.append("package " + schema.getMavenGroupId() + ";" + ln);
+			buffer.append("package " + schema.getMavenGroupId()+".persistance"  + ";" + ln);
 			buffer.append(ln);
 		}
 

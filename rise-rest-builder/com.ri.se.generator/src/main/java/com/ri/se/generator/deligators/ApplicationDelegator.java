@@ -15,10 +15,12 @@ public class ApplicationDelegator implements Generate {
 	private String produceApplication(Schema schema) {
 		StringBuffer buffer = new StringBuffer();
 		if (!Objects.isNull(schema.getMavenGroupId())) {
-			buffer.append("package " + schema.getMavenGroupId() + ";" + ln);
+			buffer.append("package " + schema.getMavenGroupId()+".main" + ";" + ln);
 			buffer.append(ln);
 		}
 
+		buffer.append("import "+schema.getMavenGroupId()+".persistance.*;" + ln); 
+		buffer.append("import "+schema.getMavenGroupId()+".utils.*;" + ln); 
 		buffer.append("import java.net.SocketException;" + ln);
 		buffer.append("import java.util.Map;" + ln);
 

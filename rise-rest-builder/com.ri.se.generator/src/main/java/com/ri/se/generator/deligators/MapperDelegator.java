@@ -17,7 +17,7 @@ public class MapperDelegator implements Generate {
 		StringBuffer stringBuffer = new StringBuffer();
 
 		if (!Objects.isNull(schema.getMavenGroupId())) {
-			stringBuffer.append("package " + schema.getMavenGroupId() + ";" + ln);
+			stringBuffer.append("package " + schema.getMavenGroupId()+".persistance"  + ";" + ln);
 			stringBuffer.append(ln);
 		}
 		stringBuffer.append(ln);

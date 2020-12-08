@@ -14,9 +14,11 @@ public class AppConfigurationDelegator implements Generate {
 
 		StringBuffer buffer = new StringBuffer();
 
-		buffer.append("package " + schema.getMavenGroupId() + ";" + ln + ln);
+		buffer.append("package " + schema.getMavenGroupId()+".main" + ";" + ln + ln);
 
 		buffer.append("import java.util.Date;" + ln);
+		buffer.append("import "+schema.getMavenGroupId()+".persistance.*;" + ln); 
+		buffer.append("import "+schema.getMavenGroupId()+".utils.*;" + ln); 
 
 		buffer.append("\n" + "import java.util.Collections;\n" + "import java.util.Map;\n" + "\n"
 				+ "import javax.validation.Valid;\n" + "import javax.validation.constraints.NotNull;\n" + "\n"

@@ -22,7 +22,7 @@ public class EntityDelegator implements Generate {
 		stringBuffer.append("");
 
 		if (!Objects.isNull(schema.getMavenGroupId())) {
-			stringBuffer.append("package " + schema.getMavenGroupId() + ";" + ln);
+			stringBuffer.append("package " + schema.getMavenGroupId()+".persistance" + ";" + ln);
 			stringBuffer.append(ln);
 		}
 

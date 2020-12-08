@@ -82,49 +82,49 @@ public class RestBuilder {
 		Generate gen = new EntityDelegator();
 		// Create Entry
 		String entity = gen.create(schema);
-		new IOOperations().write(codeStructureHandler.getSrcJava() + schema.getClassName() + ".java", entity);
+		new IOOperations().write(codeStructureHandler.getSrcPersistanceJava() + schema.getClassName() + ".java", entity);
 
 		// Create DAO
 		gen = new DAODelegator();
 		String dao = gen.create(schema);
-		new IOOperations().write(codeStructureHandler.getSrcJava() + schema.getClassName() + "DAO" + ".java", dao);
+		new IOOperations().write(codeStructureHandler.getSrcPersistanceJava() + schema.getClassName() + "DAO" + ".java", dao);
 
 		// Create Mapper
 		gen = new MapperDelegator();
 		String mapper = gen.create(schema);
-		new IOOperations().write(codeStructureHandler.getSrcJava() + schema.getClassName() + "Mapper" + ".java",
+		new IOOperations().write(codeStructureHandler.getSrcPersistanceJava() + schema.getClassName() + "Mapper" + ".java",
 				mapper);
 
 		// Create Service
 		gen = new ServiceDelegator();
 		String service = gen.create(schema);
-		new IOOperations().write(codeStructureHandler.getSrcJava() + schema.getClassName() + "Service" + ".java",
+		new IOOperations().write(codeStructureHandler.getSrcPersistanceJava() + schema.getClassName() + "Service" + ".java",
 				service);
 
 		// Create Configuration
 		gen = new AppConfigurationDelegator();
 		String configuration = gen.create(schema);
-		new IOOperations().write(codeStructureHandler.getSrcJava() + schema.getClassName() + "Configuration" + ".java",
+		new IOOperations().write(codeStructureHandler.getSrcMainJava()+ schema.getClassName() + "Configuration" + ".java",
 				configuration);
 
 		// Create List
 		gen = new ModelListDelegator();
 		String list = gen.create(schema);
-		new IOOperations().write(codeStructureHandler.getSrcJava() + schema.getClassName() + "List" + ".java", list);
+		new IOOperations().write(codeStructureHandler.getSrcPersistanceJava() + schema.getClassName() + "List" + ".java", list);
 
 		gen = new ResourceDelegator();
 		String resource = gen.create(schema);
-		new IOOperations().write(codeStructureHandler.getSrcJava() + schema.getClassName() + "Resource" + ".java",
+		new IOOperations().write(codeStructureHandler.getSrcUtilsJava() + schema.getClassName() + "Resource" + ".java",
 				resource);
 
 		gen = new ApplicationDelegator();
 		String application = gen.create(schema);
-		new IOOperations().write(codeStructureHandler.getSrcJava() + schema.getClassName() + "Application" + ".java",
+		new IOOperations().write(codeStructureHandler.getSrcMainJava() + schema.getClassName() + "Application" + ".java",
 				application);
 
 		gen = new TemplateHealthCheckDelegator();
 		String health = gen.create(schema);
-		new IOOperations().write(codeStructureHandler.getSrcJava() + "TemplateHealthCheck" + ".java", health);
+		new IOOperations().write(codeStructureHandler.getSrcUtilsJava() + "TemplateHealthCheck" + ".java", health);
 
 		gen = new PomDelegator();
 		String pom = gen.create(schema);
